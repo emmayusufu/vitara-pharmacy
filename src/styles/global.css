@@ -120,10 +120,6 @@ h3 {
 
 /* Responsive type scaling for small phones */
 @media (max-width: 480px) {
-  .hero-title {
-    font-size: 40px !important;
-  }
-
   .page-title {
     font-size: 34px !important;
   }
