@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ImageSlot from '../components/ImageSlot.astro';
+const base = import.meta.env.BASE_URL;
+---
+<Layout title="Services | Vitara Pharmacy" description="Prescription filling, pharmacist consultations, home delivery, health screenings, vaccinations, and everyday wellness products at Vitara Pharmacy in Naalya." active="services">
+<div style="font-family:'Nunito',sans-serif; color:#10161C;">
+
+  <section style="position:relative; overflow:hidden; padding:72px 24px 64px; background:#F6F9FC;">
+    <div style="position:absolute; top:-120px; left:-100px; width:340px; height:340px; border-radius:58% 42% 45% 55% / 55% 45% 58% 42%; background:#E7F7EF; z-index:0;"></div>
+    <div style="position:relative; z-index:1; max-width:760px; margin:0 auto; text-align:center;">
+      <span style="display:inline-block; background:#EAF3FB; color:#1768B3; font-size:14px; font-weight:700; padding:7px 16px; border-radius:8px;">Services</span>
+      <h1 class="page-title" style="font-weight:600; font-size:44px; line-height:1.15; margin:20px 0 0; color:#0F3D66;">Pharmacy services &amp; products</h1>
+      <p style="font-size:17px; line-height:1.65; color:#4B5563; margin:18px 0 0;">From prescriptions to everyday wellness, our pharmacists are here to help.</p>
+    </div>
+  </section>
+
+  <section id="services" style="padding:88px 24px;">
+    <div style="max-width:1240px; margin:0 auto; display:flex; flex-wrap:wrap; gap:24px;">
+      <div style="flex:1 1 300px; background:#FFFFFF; border:1px solid #E4E9ED; border-radius:18px; padding:32px; box-shadow:0 1px 2px rgba(16,22,28,0.04);">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#1768B3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="8.5" width="19" height="7" rx="3.5" transform="rotate(-40 12 12)"/><line x1="12" y1="6.7" x2="12" y2="17.3" transform="rotate(-40 12 12)"/></svg>
+        <h3 style="font-weight:500; font-size:19px; margin:16px 0 8px;">Prescription filling &amp; refills</h3>
+        <p style="font-size:15px; color:#4B5563; line-height:1.6; margin:0;">Bring in a new prescription or set up easy repeat refills.</p>
+      </div>
+      <div style="flex:1 1 300px; background:#FFFFFF; border:1px solid #E4E9ED; border-radius:18px; padding:32px; box-shadow:0 1px 2px rgba(16,22,28,0.04);">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#1E9E6B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H9l-4 4V6z"/></svg>
+        <h3 style="font-weight:500; font-size:19px; margin:16px 0 8px;">Pharmacist consultations</h3>
+        <p style="font-size:15px; color:#4B5563; line-height:1.6; margin:0;">One-on-one advice on medicines, dosage, and interactions.</p>
+      </div>
+      <div style="flex:1 1 300px; background:#FFFFFF; border:1px solid #E4E9ED; border-radius:18px; padding:32px; box-shadow:0 1px 2px rgba(16,22,28,0.04);">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#1768B3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v8H3z"/><path d="M14 10h4l3 3v2h-7z"/><circle cx="7.5" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>
+        <h3 style="font-weight:500; font-size:19px; margin:16px 0 8px;">Home delivery</h3>
+        <p style="font-size:15px; color:#4B5563; line-height:1.6; margin:0;">Medicine delivered to your door across Naalya.</p>
+      </div>
+      <div style="flex:1 1 300px; background:#FFFFFF; border:1px solid #E4E9ED; border-radius:18px; padding:32px; box-shadow:0 1px 2px rgba(16,22,28,0.04);">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#1E9E6B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg>
+        <h3 style="font-weight:500; font-size:19px; margin:16px 0 8px;">Health screenings</h3>
+        <p style="font-size:15px; color:#4B5563; line-height:1.6; margin:0;">Quick checks for blood pressure, glucose, and more.</p>
+      </div>
+      <div style="flex:1 1 300px; background:#FFFFFF; border:1px solid #E4E9ED; border-radius:18px; padding:32px; box-shadow:0 1px 2px rgba(16,22,28,0.04);">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#1768B3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4l-3 3M15 5l4 4-9 9H7v-3l9-9z"/><path d="M5 19l2-2"/></svg>
+        <h3 style="font-weight:500; font-size:19px; margin:16px 0 8px;">Vaccinations</h3>
+        <p style="font-size:15px; color:#4B5563; line-height:1.6; margin:0;">Seasonal flu and routine vaccinations by licensed staff.</p>
+      </div>
+      <div style="flex:1 1 300px; background:#FFFFFF; border:1px solid #E4E9ED; border-radius:18px; padding:32px; box-shadow:0 1px 2px rgba(16,22,28,0.04);">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#1E9E6B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.35-9.5-8.5C.7 8.2 2.4 5 5.6 5c1.9 0 3.2 1 4.4 2.5C11.2 6 12.5 5 14.4 5c3.2 0 4.9 3.2 3.1 6.5C19 15.65 12 20 12 20z"/></svg>
+        <h3 style="font-weight:500; font-size:19px; margin:16px 0 8px;">OTC &amp; wellness products</h3>
+        <p style="font-size:15px; color:#4B5563; line-height:1.6; margin:0;">Vitamins, supplements, and personal care essentials.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" style="padding:0 24px 90px; background:#F6F9FC; padding-top:80px;">
+    <div style="max-width:1240px; margin:0 auto;">
+      <div style="max-width:560px; margin:0 auto 44px; text-align:center;">
+        <h2 style="font-weight:600; font-size:34px; margin:0; color:#10161C;">Shop in-store categories</h2>
+        <p style="font-size:16.5px; color:#4B5563; margin:12px 0 0;">Browse what's on our shelves in Naalya.</p>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:24px;">
+        <div style="flex:1 1 260px; background:#FFFFFF; border:1px solid #E4E9ED; border-radius:18px; overflow:hidden;">
+          <ImageSlot shape="rect" label="Vitamins &amp; supplements" style="width:100%; height:160px;" />
+          <div style="padding:18px 20px;"><h3 style="font-weight:500; font-size:16px; margin:0;">Vitamins &amp; supplements</h3></div>
+        </div>
+        <div style="flex:1 1 260px; background:#FFFFFF; border:1px solid #E4E9ED; border-radius:18px; overflow:hidden;">
+          <ImageSlot shape="rect" label="Personal care" style="width:100%; height:160px;" />
+          <div style="padding:18px 20px;"><h3 style="font-weight:500; font-size:16px; margin:0;">Personal care</h3></div>
+        </div>
+        <div style="flex:1 1 260px; background:#FFFFFF; border:1px solid #E4E9ED; border-radius:18px; overflow:hidden;">
+          <ImageSlot shape="rect" label="Baby &amp; maternal care" style="width:100%; height:160px;" />
+          <div style="padding:18px 20px;"><h3 style="font-weight:500; font-size:16px; margin:0;">Baby &amp; maternal care</h3></div>
+        </div>
+        <div style="flex:1 1 260px; background:#FFFFFF; border:1px solid #E4E9ED; border-radius:18px; overflow:hidden;">
+          <ImageSlot shape="rect" label="Medical devices" style="width:100%; height:160px;" />
+          <div style="padding:18px 20px;"><h3 style="font-weight:500; font-size:16px; margin:0;">Medical devices &amp; equipment</h3></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:0 24px 96px;">
+    <div class="cta-panel" style="max-width:1240px; margin:0 auto; background:#0F3D66; border-radius:28px; padding:56px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:28px; position:relative; overflow:hidden;">
+      <div style="position:absolute; top:-80px; right:-60px; width:260px; height:260px; border-radius:50%; background:#1E9E6B; opacity:0.18;"></div>
+      <div style="position:relative; z-index:1; max-width:520px;">
+        <h2 style="font-weight:600; font-size:30px; margin:0; color:#FFFFFF;">Have a prescription ready?</h2>
+        <p style="font-size:16px; color:#C7D6E4; margin:12px 0 0; line-height:1.6;">Visit us in Naalya or call ahead and we'll have it ready for pickup.</p>
+      </div>
+      <a href={`${base}contact#location`} class="btn-white" style="position:relative; z-index:1; padding:16px 30px; border-radius:12px; font-size:16px; flex-shrink:0;">Contact us</a>
+    </div>
+  </section>
+
+</div>
+</Layout>

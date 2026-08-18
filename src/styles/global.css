@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Montserrat+Alternates:wght@600;700;800&family=Funnel+Display:wght@500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  font-family: 'Nunito', sans-serif;
+  color: #10161c;
+}
+
+a {
+  color: #1768b3;
+}
+
+a:hover {
+  color: #0f3d66;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Funnel Display', sans-serif;
+}
+
+.wordmark {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.btn-primary {
+  background: #1768b3;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+}
+
+.btn-primary:hover {
+  background: #0f3d66;
+  color: #ffffff;
+}
+
+.btn-outline {
+  background: #ffffff;
+  color: #1768b3;
+  border: 1.5px solid #1768b3;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn-outline:hover {
+  background: #eaf3fb;
+  color: #1768b3;
+}
+
+.btn-white {
+  background: #ffffff;
+  color: #0f3d66;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn-white:hover {
+  background: #eaf3fb;
+  color: #0f3d66;
+}
+
+.btn-green {
+  background: #1e9e6b;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn-green:hover {
+  background: #167a52;
+  color: #ffffff;
+}
+
+.footer-link {
+  color: #aec2d6;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
+
+.text-link {
+  color: #1768b3;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  color: #0f3d66;
+}
+
+/* Image placeholders until real photos are added */
+.img-slot {
+  background: #f0f4f8;
+  border: 1.5px dashed #c8d4de;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #8a96a1;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 12px;
+}
+
+.img-slot.circle {
+  border-radius: 50%;
+}
+
+/* Responsive type scaling for small phones */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 40px !important;
+  }
+
+  .page-title {
+    font-size: 34px !important;
+  }
+
+  .cta-panel {
+    padding: 36px 28px !important;
+  }
+}

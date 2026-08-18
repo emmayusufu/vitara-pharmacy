@@ -1,0 +1,7 @@
+---
+// Placeholder for photos that have not been added yet.
+// Swap for a real <img> once photos are available.
+const { label = 'Photo', shape = 'rect', style = '' } = Astro.props;
+const radius = shape === 'circle' ? '' : shape === 'rounded' ? 'border-radius:20px;' : 'border-radius:0;';
+---
+<div class={shape === 'circle' ? 'img-slot circle' : 'img-slot'} style={`${radius} ${style}`}>{label}</div>

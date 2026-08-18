@@ -1,0 +1,186 @@
+---
+const { active = '' } = Astro.props;
+const base = import.meta.env.BASE_URL;
+
+const navItems = [
+  { key: 'home', label: 'Home', href: base },
+  { key: 'about', label: 'About', href: `${base}about` },
+  { key: 'services', label: 'Services', href: `${base}services` },
+  { key: 'careers', label: 'Careers', href: `${base}careers` },
+  { key: 'news', label: 'News', href: `${base}news` },
+  { key: 'contact', label: 'Contact', href: `${base}contact` },
+];
+const storeHref = `${base}contact#location`;
+---
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href={base} class="nav-brand">
+      <img src={`${base}logo-mark.png`} alt="Vitara Pharmacy logo" width="38" height="35" style="display:block;" />
+      <span class="wordmark" style="font-weight:800; font-size:20px; color:#10161C; white-space:nowrap;">Vitara <span style="font-weight:500; color:#5B6672;">Pharmacy</span></span>
+    </a>
+    <div class="nav-links">
+      {navItems.map((item) => (
+        <a href={item.href} class={item.key === active ? 'nav-link active' : 'nav-link'}>{item.label}</a>
+      ))}
+    </div>
+    <div class="nav-cta">
+      <a href={storeHref} class="btn-primary" style="padding:11px 22px; border-radius:10px; font-size:15px;">Find a store</a>
+    </div>
+    <button class="nav-burger" aria-label="Menu" aria-expanded="false">
+      <span class="burger-bars">
+        <span></span><span></span><span></span>
+      </span>
+      <span class="burger-x">&times;</span>
+    </button>
+  </div>
+  <div class="nav-dropdown">
+    {navItems.map((item) => (
+      <a href={item.href} class={item.key === active ? 'drop-link active' : 'drop-link'}>{item.label}</a>
+    ))}
+    <a href={storeHref} class="btn-primary" style="padding:12px 20px; border-radius:10px; font-size:15px; margin-top:8px; text-align:center;">Find a store</a>
+  </div>
+</nav>
+
+<style>
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 1px solid #e4e9ed;
+  }
+
+  .nav-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: #3a4450;
+  }
+
+  .nav-link:hover {
+    color: #1768b3;
+  }
+
+  .nav-link.active {
+    font-weight: 700;
+    color: #1768b3;
+  }
+
+  .nav-cta {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .nav-burger {
+    display: none;
+    background: none;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .burger-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 4px;
+  }
+
+  .burger-bars span {
+    width: 22px;
+    height: 2px;
+    background: #10161c;
+    display: block;
+    border-radius: 1px;
+  }
+
+  .burger-x {
+    display: none;
+    font-size: 26px;
+    color: #10161c;
+    line-height: 1;
+    font-family: sans-serif;
+  }
+
+  .nav-dropdown {
+    display: none;
+    flex-direction: column;
+    padding: 8px 24px 20px;
+    gap: 4px;
+    background: #ffffff;
+    border-top: 1px solid #e4e9ed;
+  }
+
+  .drop-link {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #3a4450;
+    padding: 10px 4px;
+  }
+
+  .drop-link.active {
+    font-weight: 700;
+    color: #1768b3;
+  }
+
+  @media (max-width: 859px) {
+    .nav-links,
+    .nav-cta {
+      display: none;
+    }
+
+    .nav-burger {
+      display: block;
+    }
+
+    .site-nav.open .nav-dropdown {
+      display: flex;
+    }
+
+    .site-nav.open .burger-bars {
+      display: none;
+    }
+
+    .site-nav.open .burger-x {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  const nav = document.querySelector('.site-nav');
+  const burger = document.querySelector('.nav-burger');
+  if (nav && burger) {
+    burger.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      burger.setAttribute('aria-expanded', String(open));
+    });
+  }
+</script>

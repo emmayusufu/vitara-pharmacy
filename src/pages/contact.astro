@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ImageSlot from '../components/ImageSlot.astro';
+---
+<Layout title="Contact | Vitara Pharmacy" description="Visit Vitara Pharmacy at JSM Complex, Naalya, Kampala, or reach us by phone, email, or the contact form." active="contact">
+<div style="font-family:'Nunito',sans-serif; color:#10161C;">
+
+  <section style="position:relative; overflow:hidden; padding:72px 24px 64px; background:#F6F9FC;">
+    <div style="position:absolute; top:-120px; right:-100px; width:340px; height:340px; border-radius:42% 58% 63% 37% / 45% 45% 55% 55%; background:#EAF3FB; z-index:0;"></div>
+    <div style="position:relative; z-index:1; max-width:760px; margin:0 auto; text-align:center;">
+      <span style="display:inline-block; background:#E7F7EF; color:#167A52; font-size:14px; font-weight:700; padding:7px 16px; border-radius:8px;">Contact</span>
+      <h1 class="page-title" style="font-weight:600; font-size:44px; line-height:1.15; margin:20px 0 0; color:#0F3D66;">Visit or reach us</h1>
+      <p style="font-size:17px; line-height:1.65; color:#4B5563; margin:18px 0 0;">We're in Naalya and happy to help, in person or over the phone.</p>
+    </div>
+  </section>
+
+  <section id="location" style="padding:80px 24px;">
+    <div style="max-width:1240px; margin:0 auto; display:flex; flex-wrap:wrap; gap:48px;">
+      <div style="flex:1 1 340px;">
+        <h2 style="font-weight:600; font-size:26px; margin:0 0 26px; color:#10161C;">Store details</h2>
+        <div style="display:flex; flex-direction:column; gap:22px;">
+          <div style="display:flex; gap:16px; align-items:flex-start;">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#1768B3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px;"><path d="M12 21s7-6.5 7-11a7 7 0 1 0-14 0c0 4.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <div>
+              <h3 style="font-weight:500; font-size:16px; margin:0 0 4px;">Address</h3>
+              <p style="font-size:15px; color:#4B5563; line-height:1.6; margin:0;">JSM Complex, Naalya<br/>Opposite Quality Supermarket<br/>Kampala, Uganda</p>
+            </div>
+          </div>
+          <div style="display:flex; gap:16px; align-items:flex-start;">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#1E9E6B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px;"><path d="M5 4h3.5l1.5 4-2 1.3c1 2.4 2.8 4.2 5.2 5.2l1.3-2 4 1.5V17c0 1.1-.9 2-2 2C10.5 19 3 11.5 3 6c0-1.1.9-2 2-2z"/></svg>
+            <div>
+              <h3 style="font-weight:500; font-size:16px; margin:0 0 4px;">Phone</h3>
+              <p style="font-size:15px; color:#4B5563; line-height:1.6; margin:0;"><a href="tel:+256700123456" style="color:#4B5563; text-decoration:none;">+256 700 123 456</a></p>
+            </div>
+          </div>
+          <div style="display:flex; gap:16px; align-items:flex-start;">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#1768B3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px;"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6l9 7 9-7"/></svg>
+            <div>
+              <h3 style="font-weight:500; font-size:16px; margin:0 0 4px;">Email</h3>
+              <p style="font-size:15px; color:#4B5563; line-height:1.6; margin:0;"><a href="mailto:info@vitarapharmacy.co.ug" style="color:#4B5563; text-decoration:none;">info@vitarapharmacy.co.ug</a></p>
+            </div>
+          </div>
+          <div style="display:flex; gap:16px; align-items:flex-start;">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#1E9E6B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px;"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
+            <div>
+              <h3 style="font-weight:500; font-size:16px; margin:0 0 4px;">Hours</h3>
+              <p style="font-size:15px; color:#4B5563; line-height:1.6; margin:0;">Mon&ndash;Sat: 8:00am&ndash;9:00pm<br/>Sun: 9:00am&ndash;6:00pm</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="flex:1 1 400px; min-width:300px;">
+        <ImageSlot shape="rounded" label="Map or storefront photo" style="width:100%; height:100%; min-height:360px;" />
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:0 24px 96px;">
+    <div style="max-width:760px; margin:0 auto; background:#FFFFFF; border:1px solid #E4E9ED; border-radius:24px; padding:44px;">
+      <h2 style="font-weight:600; font-size:26px; margin:0 0 8px; color:#10161C;">Send us a message</h2>
+      <p style="font-size:15px; color:#4B5563; margin:0 0 28px;">We typically reply within one business day.</p>
+
+      <form id="contact-form" style="display:flex; flex-direction:column; gap:18px;">
+        <div style="display:flex; flex-wrap:wrap; gap:18px;">
+          <div style="flex:1 1 220px; display:flex; flex-direction:column; gap:6px;">
+            <label for="cf-name" style="font-size:14px; font-weight:600; color:#2A323B;">Name</label>
+            <input id="cf-name" type="text" name="name" placeholder="Your name" required style="border:1px solid #DCE3E8; border-radius:10px; padding:12px 14px; font-size:15px; font-family:'Nunito',sans-serif; color:#10161C;" />
+          </div>
+          <div style="flex:1 1 220px; display:flex; flex-direction:column; gap:6px;">
+            <label for="cf-email" style="font-size:14px; font-weight:600; color:#2A323B;">Email</label>
+            <input id="cf-email" type="email" name="email" placeholder="you@example.com" required style="border:1px solid #DCE3E8; border-radius:10px; padding:12px 14px; font-size:15px; font-family:'Nunito',sans-serif; color:#10161C;" />
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <label for="cf-message" style="font-size:14px; font-weight:600; color:#2A323B;">Message</label>
+          <textarea id="cf-message" name="message" placeholder="How can we help?" rows="5" required style="border:1px solid #DCE3E8; border-radius:10px; padding:12px 14px; font-size:15px; font-family:'Nunito',sans-serif; color:#10161C; resize:vertical;"></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="border-radius:12px; padding:15px 28px; font-size:16px; cursor:pointer; align-self:flex-start;">Send message</button>
+      </form>
+
+      <div id="contact-success" style="display:none; text-align:center; padding:20px 0;">
+        <svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="#1E9E6B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto;"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></svg>
+        <h3 style="font-weight:500; font-size:19px; margin:16px 0 6px;">Message sent</h3>
+        <p id="contact-success-name" style="font-size:15px; color:#4B5563; margin:0;">Thanks. We'll be in touch soon.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  const form = document.getElementById('contact-form');
+  const successBlock = document.getElementById('contact-success');
+  const successName = document.getElementById('contact-success-name');
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const nameInput = document.getElementById('cf-name');
+    const name = nameInput instanceof HTMLInputElement ? nameInput.value : '';
+    if (successName) successName.textContent = `Thanks, ${name}. We'll be in touch soon.`;
+    form.style.display = 'none';
+    if (successBlock) successBlock.style.display = 'block';
+  });
+</script>
+</Layout>
