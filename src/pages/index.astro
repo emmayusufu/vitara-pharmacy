@@ -14,8 +14,8 @@ const base = import.meta.env.BASE_URL;
         <h1 class="hero-title" style="font-weight:600; font-size:56px; line-height:1.08; margin:24px 0 0; color:#0F3D66;">Health,<br/>close to <span style="color:#1E9E6B;">home</span>.</h1>
         <p style="font-size:18px; line-height:1.65; color:#4B5563; margin:22px 0 0; max-width:460px;">Vitara Pharmacy is your neighborhood partner for prescriptions, consultations, and everyday wellness, right in Naalya.</p>
         <div style="display:flex; flex-wrap:wrap; gap:14px; margin-top:34px;">
-          <a href={`${base}contact#location`} class="btn-primary" style="padding:15px 28px; border-radius:12px; font-size:16px;">Find our store</a>
-          <a href={`${base}services`} class="btn-outline" style="padding:15px 28px; border-radius:12px; font-size:16px;">Explore services</a>
+          <a href={`${base}contact/#location`} class="btn-primary" style="padding:15px 28px; border-radius:12px; font-size:16px;">Find our store</a>
+          <a href={`${base}services/`} class="btn-outline" style="padding:15px 28px; border-radius:12px; font-size:16px;">Explore services</a>
         </div>
       </div>
       <div style="flex:1 1 400px; min-width:300px; display:flex; justify-content:center;">
@@ -76,7 +76,7 @@ const base = import.meta.env.BASE_URL;
         </div>
       </div>
       <div style="text-align:center; margin-top:36px;">
-        <a href={`${base}services`} class="text-link" style="font-size:15.5px;">See all services &rarr;</a>
+        <a href={`${base}services/`} class="text-link" style="font-size:15.5px;">See all services &rarr;</a>
       </div>
     </div>
   </section>
@@ -94,7 +94,7 @@ const base = import.meta.env.BASE_URL;
         <p style="font-size:15.5px; color:#4B5563; line-height:1.65; margin:0;">To provide safe, affordable, and compassionate pharmaceutical care while empowering our communities to live healthier lives.</p>
       </div>
       <div style="flex:1 1 100%; text-align:center; margin-top:4px;">
-        <a href={`${base}about`} class="text-link" style="font-size:15.5px;">Learn more about us &rarr;</a>
+        <a href={`${base}about/`} class="text-link" style="font-size:15.5px;">Learn more about us &rarr;</a>
       </div>
     </div>
   </section>
@@ -103,24 +103,24 @@ const base = import.meta.env.BASE_URL;
     <div style="max-width:1240px; margin:0 auto;">
       <div style="display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-bottom:36px;">
         <h2 style="font-weight:600; font-size:34px; margin:0; color:#10161C;">Latest at Vitara</h2>
-        <a href={`${base}news`} class="text-link" style="font-size:15px;">View all news &rarr;</a>
+        <a href={`${base}news/`} class="text-link" style="font-size:15px;">View all news &rarr;</a>
       </div>
       <div style="display:flex; flex-wrap:wrap; gap:24px;">
-        <a href={`${base}news`} style="flex:1 1 300px; text-decoration:none; color:inherit; background:#FFFFFF; border:1px solid #E4E9ED; border-radius:18px; overflow:hidden; display:block;">
+        <a href={`${base}news/`} style="flex:1 1 300px; text-decoration:none; color:inherit; background:#FFFFFF; border:1px solid #E4E9ED; border-radius:18px; overflow:hidden; display:block;">
           <ImageSlot shape="rect" label="Photo: new pickup counter" style="width:100%; height:170px;" />
           <div style="padding:22px;">
             <span style="font-size:13px; color:#8A96A1; font-weight:600;">Aug 2026</span>
             <h3 style="font-weight:500; font-size:16.5px; margin:8px 0 0; color:#10161C; line-height:1.4;">A faster counter for prescription pickup</h3>
           </div>
         </a>
-        <a href={`${base}news`} style="flex:1 1 300px; text-decoration:none; color:inherit; background:#FFFFFF; border:1px solid #E4E9ED; border-radius:18px; overflow:hidden; display:block;">
+        <a href={`${base}news/`} style="flex:1 1 300px; text-decoration:none; color:inherit; background:#FFFFFF; border:1px solid #E4E9ED; border-radius:18px; overflow:hidden; display:block;">
           <ImageSlot shape="rect" label="Photo: blood pressure screening" style="width:100%; height:170px;" />
           <div style="padding:22px;">
             <span style="font-size:13px; color:#8A96A1; font-weight:600;">Jul 2026</span>
             <h3 style="font-weight:500; font-size:16.5px; margin:8px 0 0; color:#10161C; line-height:1.4;">Free blood pressure screening week returns</h3>
           </div>
         </a>
-        <a href={`${base}news`} style="flex:1 1 300px; text-decoration:none; color:inherit; background:#FFFFFF; border:1px solid #E4E9ED; border-radius:18px; overflow:hidden; display:block;">
+        <a href={`${base}news/`} style="flex:1 1 300px; text-decoration:none; color:inherit; background:#FFFFFF; border:1px solid #E4E9ED; border-radius:18px; overflow:hidden; display:block;">
           <ImageSlot shape="rect" label="Photo: seasonal vaccination" style="width:100%; height:170px;" />
           <div style="padding:22px;">
             <span style="font-size:13px; color:#8A96A1; font-weight:600;">Jul 2026</span>
@@ -136,9 +136,9 @@ const base = import.meta.env.BASE_URL;
       <div style="position:absolute; top:-80px; right:-60px; width:260px; height:260px; border-radius:50%; background:#1E9E6B; opacity:0.18;"></div>
       <div style="position:relative; z-index:1; max-width:520px;">
         <h2 style="font-weight:600; font-size:30px; margin:0; color:#FFFFFF;">Visit us today</h2>
-        <p style="font-size:16px; color:#C7D6E4; margin:12px 0 0; line-height:1.6;">JSM Complex, Naalya &mdash; opposite Quality Supermarket, Kampala.</p>
+        <p style="font-size:16px; color:#C7D6E4; margin:12px 0 0; line-height:1.6;">JSM Complex, Naalya &mdash; opposite Quality Shopping Village, Nakawa Division, Kampala.</p>
       </div>
-      <a href={`${base}contact#location`} class="btn-white" style="position:relative; z-index:1; padding:16px 30px; border-radius:12px; font-size:16px; flex-shrink:0;">Get directions</a>
+      <a href={`${base}contact/#location`} class="btn-white" style="position:relative; z-index:1; padding:16px 30px; border-radius:12px; font-size:16px; flex-shrink:0;">Get directions</a>
     </div>
   </section>
 

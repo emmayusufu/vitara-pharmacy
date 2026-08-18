@@ -3,8 +3,43 @@ import NavBar from '../components/NavBar.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
-const { title, description, active } = Astro.props;
+const { title, description, active, noindex = false } = Astro.props;
 const base = import.meta.env.BASE_URL;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(`${base}og-image.png`, Astro.site);
+
+const businessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Pharmacy',
+  name: 'Vitara Pharmacy',
+  legalName: 'Vitara Health Group Ltd',
+  description: 'Community pharmacy in Naalya, Kampala offering prescriptions, pharmacist consultations, home delivery, and everyday wellness products.',
+  url: new URL(base, Astro.site).toString(),
+  image: ogImageURL.toString(),
+  telephone: ['+256747511900', '+256795572389'],
+  email: 'vitarahealthgroupltd@gmail.com',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'JSM Complex, Naalya, Opp. Quality Shopping Village, Nakawa Division',
+    addressLocality: 'Kampala',
+    addressCountry: 'UG',
+  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      opens: '08:00',
+      closes: '21:00',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Sunday'],
+      opens: '09:00',
+      closes: '18:00',
+    },
+  ],
+};
 ---
 <!doctype html>
 <html lang="en">
@@ -13,7 +48,26 @@ const base = import.meta.env.BASE_URL;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="canonical" href={canonicalURL} />
     <link rel="icon" type="image/png" href={`${base}favicon.png`} />
+    <link rel="apple-touch-icon" href={`${base}apple-touch-icon.png`} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Vitara Pharmacy" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
   </head>
   <body>
     <NavBar active={active} />
