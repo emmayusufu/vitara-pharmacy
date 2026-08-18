@@ -118,6 +118,11 @@ h3 {
   border-radius: 50%;
 }
 
+/* Fluid sizing for hero/intro paragraphs so they don't read oversized on phones */
+.lede {
+  font-size: clamp(14px, 1vw + 11px, 17px);
+}
+
 /* Responsive type scaling for small phones */
 @media (max-width: 480px) {
   .page-title {
